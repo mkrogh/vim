@@ -46,7 +46,8 @@ set smarttab
 
 set nowrap
 
-"set foldmethod=syntax "on trial
+set foldmethod=syntax "on trial
+set nofoldenable "on trial
 
 command! -bar -nargs=0 W :silent exe "write !sudo tee % >/dev/null"|silent edit!
 
