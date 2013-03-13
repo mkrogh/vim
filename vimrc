@@ -44,6 +44,8 @@ set shiftwidth=2
 set tabstop=2
 set smarttab
 
+set list listchars=tab:\ \ ,trail:· "on trial
+
 set nowrap
 
 set foldmethod=syntax "on trial
