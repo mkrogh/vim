@@ -33,16 +33,8 @@ set dictionary=/usr/share/dict/words "on trial ctrl-x ctrl-k
 colorscheme desert
 set background=dark
 
-function! CreateDir(dir)
-    if !isdirectory(a:dir)
-		call mkdir(a:dir, "p")
-    endif
-endfunction
-
 set backup
-call CreateDir($HOME . '/.vim/backup')
 set backupdir=~/.vim/backup
-call CreateDir($HOME . '/.vim/tmp')
 set directory=~/.vim/tmp
 
 set expandtab
