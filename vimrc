@@ -40,8 +40,8 @@ set directory=~/.vim/tmp
 set expandtab
 set autoindent
 set cindent "on trial
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set smarttab
 
 set nowrap
