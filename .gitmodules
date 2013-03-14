@@ -4,3 +4,6 @@
 [submodule "bundles/buftabs"]
 	path = bundles/buftabs
 	url = https://github.com/vim-scripts/buftabs.git
+[submodule "bundles/sensible"]
+	path = bundles/sensible
+	url = https://github.com/tpope/vim-sensible.git
