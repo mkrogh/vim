@@ -2,8 +2,6 @@ set nocompatible
 
 execute pathogen#infect()
 
-"set showmode
-
 set hidden
 :noremap <C-left> :bprev<CR>
 :noremap <C-right> :bnext<CR>
