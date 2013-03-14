@@ -14,8 +14,8 @@ filetype indent on
 syntax enable
 
 set hidden
-:nnoremap <C-n> :bnext<CR> "on trial
-:nnoremap <C-p> :bprevious<CR> "on trial
+:noremap <C-left> :bprev<CR>
+:noremap <C-right> :bnext<CR>
 
 set autoread
 set ruler
