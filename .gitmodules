@@ -13,3 +13,6 @@
 [submodule "bundle/kwbdi"]
 	path = bundle/kwbdi
 	url = https://github.com/vim-scripts/kwbdi.vim.git
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
