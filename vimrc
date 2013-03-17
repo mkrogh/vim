@@ -38,3 +38,6 @@ command! -bar -nargs=0 W :silent exe "write !sudo tee % >/dev/null"|silent edit!
 set wildmode=longest,list,full
 set wildmenu
 
+"Ruby stuff
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_classes_in_global = 1
