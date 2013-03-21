@@ -19,7 +19,9 @@ set background=dark
 
 set backupdir^=~/.vim/backup
 set directory^=~/.vim/tmp
-set undodir^=~/.vim/undo
+if version >= 703
+  set undodir^=~/.vim/undo
+endif
 
 set expandtab
 set cindent "on trial
