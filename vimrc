@@ -28,7 +28,7 @@ set cindent "on trial
 set shiftwidth=2
 set tabstop=2
 
-set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:\ \ ,trail:·,extends:<,precedes:>
 
 set nowrap
 
