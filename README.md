@@ -8,4 +8,4 @@ Installation
 
 Update
 ------
-`./update.sh`
+`sh ~/.vim/update.sh`
