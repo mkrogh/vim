@@ -8,9 +8,4 @@ Installation
 
 Update
 ------
-`$ git pull --recurse-submodules`
-
-or if new submodules have been added:  
-`$ git pull`  
-`$ git submodule init`  
-`$ git submodule update`
+`./update.sh`
