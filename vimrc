@@ -12,7 +12,7 @@ set ignorecase
 set smartcase
 set hlsearch
 
-set vb
+set visualbell
 
 set dictionary=/usr/share/dict/words "on trial ctrl-x ctrl-k
 
