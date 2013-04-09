@@ -14,8 +14,19 @@ set hlsearch
 
 set dictionary=/usr/share/dict/words "on trial ctrl-x ctrl-k
 
-"Make color scheme look better in crappy terminals
-if !has('gui_running')
+if has('gui_running')
+  "Turn off toolbar
+  set guioptions-=T
+  "Turn off scrollbar
+  set guioptions-=r
+
+  if has("gui_macvim")
+    set guifont=Menlo:h16
+  else
+    set guifont=Inconsolata\ 12
+  endif
+else
+  "Make color scheme look better in crappy terminals
   let g:solarized_termcolors=256
 endif
 
