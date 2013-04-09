@@ -14,8 +14,6 @@ set hlsearch
 
 set visualbell
 
-set dictionary=/usr/share/dict/words "on trial ctrl-x ctrl-k
-
 if has('gui_running')
   "Turn off toolbar
   set guioptions-=T
@@ -42,7 +40,7 @@ if version >= 703
 endif
 
 set expandtab
-set cindent "on trial
+set cindent
 set shiftwidth=2
 set tabstop=2
 
@@ -50,8 +48,8 @@ set list listchars=tab:\ \ ,trail:·,extends:<,precedes:>
 
 set nowrap
 
-set foldmethod=syntax "on trial
-set nofoldenable "on trial
+set foldmethod=syntax
+set nofoldenable
 
 command! -bar -nargs=0 W :silent exe "write !sudo tee % >/dev/null"|silent edit!
 
