@@ -14,7 +14,12 @@ set hlsearch
 
 set dictionary=/usr/share/dict/words "on trial ctrl-x ctrl-k
 
-colorscheme desert
+"Make color scheme look better in crappy terminals
+if !has('gui_running')
+  let g:solarized_termcolors=256
+endif
+
+colorscheme solarized
 set background=dark
 
 set backupdir^=~/.vim/backup
