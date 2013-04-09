@@ -12,6 +12,8 @@ set ignorecase
 set smartcase
 set hlsearch
 
+set vb
+
 set dictionary=/usr/share/dict/words "on trial ctrl-x ctrl-k
 
 if has('gui_running')
