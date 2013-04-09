@@ -14,3 +14,6 @@ do
     git submodule update $d
   fi
 done
+
+# remove untracked submodules
+git clean -f -f -d
