@@ -1,6 +1,7 @@
 set nocompatible
 
 execute pathogen#infect()
+call pathogen#helptags()
 
 set hidden
 :noremap <C-left> :bprev<CR>
