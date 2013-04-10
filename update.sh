@@ -2,6 +2,7 @@
 
 # go into repo root
 cd "$(dirname "$0")"
+VIMDIR=`pwd`
 
 # pull from git repo including initialised submodules
 git pull --recurse-submodules
@@ -28,3 +29,14 @@ fi
 
 ruby extconf.rb
 make
+
+# go back into repo root
+cd $VIMDIR
+
+# rerun update.sh if updated
+if [ "$1" != "-r" ]; then
+  if [ -n "`git diff --name-only master master@{1} update.sh`" ]; then
+    echo "update.sh was updated, rerunning."
+    ./update.sh -r
+  fi
+fi
