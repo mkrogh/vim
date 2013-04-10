@@ -60,3 +60,6 @@ set wildmenu
 "Ruby stuff
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
+
+"Tagbar mapping
+nmap <F8> :TagbarToggle<CR>
