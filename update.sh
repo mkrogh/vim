@@ -17,3 +17,8 @@ done
 
 # remove untracked submodules
 git clean -f -f -d
+
+# Build native extention for command-t
+cd bundle/command-t/ruby/command-t
+ruby extconf.rb
+make

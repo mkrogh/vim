@@ -58,3 +58,6 @@
 	path = bundle/vim-commentary
 	url = git://github.com/tpope/vim-commentary.git
   ignore = untracked
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://git.wincent.com/command-t.git
