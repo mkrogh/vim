@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # go into repo root
 cd "$(dirname "$0")"
@@ -20,5 +20,11 @@ git clean -f -f -d
 
 # Build native extention for command-t
 cd bundle/command-t/ruby/command-t
+
+if [ -f ~/.rvm/scripts/rvm ]; then
+  . ~/.rvm/scripts/rvm
+  rvm use system
+fi
+
 ruby extconf.rb
 make
