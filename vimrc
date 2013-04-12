@@ -24,7 +24,7 @@ if has('gui_running')
   if has("gui_macvim")
     set guifont=Menlo:h16
   else
-    set guifont=Inconsolata\ 12
+    set guifont=Inconsolata\ 11
   endif
 else
   "Make color scheme look better in crappy terminals
