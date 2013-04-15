@@ -63,3 +63,6 @@ let g:rubycomplete_classes_in_global = 1
 
 "Tagbar mapping
 nmap <F8> :TagbarToggle<CR>
+
+" Autoload .vimrc from current directory (used for per directory wildignore)
+set exrc
