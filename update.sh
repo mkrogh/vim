@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # go into repo root
 cd "$(dirname "$0")"
