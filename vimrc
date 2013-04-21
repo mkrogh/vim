@@ -27,8 +27,11 @@ if has('gui_running')
     set guifont=Inconsolata\ 11
   endif
 else
-  "Make color scheme look better in crappy terminals
-  let g:solarized_termcolors=256
+  "Detect 256 color terminal
+  if $TERM == "xterm-256color"
+    "Assume no solarized theme
+    let g:solarized_termcolors=256
+  endif
 endif
 
 colorscheme solarized
