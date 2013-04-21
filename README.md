@@ -10,9 +10,7 @@ Prerequisites
 
 Installation
 ------------
-    git clone --recursive git://github.com/jbro/vim.git ~/.vim && \
-    sh ~/.vim/update && \
-    ln -s ~/.vim/vimrc ~/.vimrc
+    \curl -L https://raw.github.com/jbro/vim/master/install.sh | bash -s [-c] [-d] [-p INSTALL_PATH]
 
 Update
 ------
