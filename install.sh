@@ -27,6 +27,6 @@ cd $VIM_PATH
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 if [ ! $NO_SYMLINK ]; then
-  ln -s ~/.vimrc $VIM_PATH/vimrc
+  ln -s $VIM_PATH/vimrc  ~/.vimrc
 fi
 
