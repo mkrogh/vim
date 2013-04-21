@@ -25,6 +25,9 @@ git clone --recursive $REPO $VIM_PATH
 cd $VIM_PATH
 ./update.sh -i
 
+git config user.name "Jesper B. Rosenkilde"
+git config user.email jbr@humppa.dk
+
 if [ ! $NO_SYMLINK ]; then
   ln -s $VIM_PATH/vimrc  ~/.vimrc
 fi
