@@ -23,7 +23,7 @@ done
 git clone --recursive $REPO $VIM_PATH
 
 cd $VIM_PATH
-./update.sh -r
+./update.sh -i
 
 if [ ! $NO_SYMLINK ]; then
   ln -s $VIM_PATH/vimrc  ~/.vimrc
