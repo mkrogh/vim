@@ -57,7 +57,6 @@ function install_rc {
 }
 
 function rerun {
-  build_command_t
   exit
 }
 
