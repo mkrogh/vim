@@ -35,7 +35,7 @@ cd $VIMDIR
 
 # rerun update.sh if updated
 if [ "$1" != "-r" ]; then
-  if [ -n "`git diff --name-only master master@{1} update.sh`" ]; then
+  if [ -n "`git diff --name-only master master@{1} update.sh 2>/dev/null`" ]; then
     echo "update.sh was updated, rerunning."
     ./update.sh -r
   fi
