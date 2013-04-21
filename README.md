@@ -14,4 +14,4 @@ Installation
 
 Update
 ------
-    sh ~/.vim/update.sh
+    ~/.vim/update.sh
