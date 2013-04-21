@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 VIM_PATH=~/.vim
-REPO="https://github.com/jbro/vim.git"
+REPO="git://github.com/jbro/vim.git"
 
 while getopts dcp: flag; do
   case $flag in
