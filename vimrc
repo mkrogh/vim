@@ -28,7 +28,7 @@ if has('gui_running')
   endif
 else
   "Detect 256 color terminal
-  if $TERM == "xterm-256color"
+  if $TERM == "xterm-256color" || $TERM == "gnome-256color"
     "Assume no solarized theme
     let g:solarized_termcolors=256
   endif
