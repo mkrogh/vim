@@ -7,8 +7,6 @@ set hidden
 :noremap <C-left> :bprev<CR>
 :noremap <C-right> :bnext<CR>
 
-set autoread
-
 set ignorecase
 set smartcase
 set hlsearch
@@ -58,7 +56,6 @@ set nofoldenable
 command! -bar -nargs=0 W :silent exe "write !sudo tee % >/dev/null"|silent edit!
 
 set wildmode=longest,list,full
-set wildmenu
 
 "Ruby stuff
 let g:rubycomplete_buffer_loading = 1
