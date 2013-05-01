@@ -4,8 +4,6 @@ execute pathogen#infect()
 call pathogen#helptags()
 
 set hidden
-:noremap <C-left> :bprev<CR>
-:noremap <C-right> :bnext<CR>
 
 set ignorecase
 set smartcase
