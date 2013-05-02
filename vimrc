@@ -23,9 +23,9 @@ if has('gui_running')
   set guioptions-=r
 
   if has("gui_macvim")
-    set guifont=Menlo\ Regular\ for\ Powerline:h16
+    set guifont=Source\ Code\ Pro\ for\ Powerline:h16
   else
-    set guifont=Menlo\ for\ Powerline\ 12
+    set guifont=Source\ Code\ Pro\ for\ Powerline\ 12
   endif
 else
   "Detect 256 color terminal
