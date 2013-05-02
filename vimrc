@@ -23,7 +23,7 @@ if has('gui_running')
   set guioptions-=r
 
   if has("gui_macvim")
-    set guifont=Menlo:h16
+    set guifont=Menlo\ Regular\ for\ Powerline:h16
   else
     set guifont=Menlo\ for\ Powerline\ 12
   endif

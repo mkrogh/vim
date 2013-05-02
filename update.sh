@@ -46,16 +46,23 @@ function build_command_t {
 }
 
 function install_fonts {
-  #XXX only works on Linux for now
-  fc-cache -vf ~/.vim/fonts
+  case `uname` in
+    "Linux")
+      fc-cache -vf ~/.vim/fonts
+      ;;
+    "Darwin")
+      find . -name *.ttf -exec cp {} ~/Library/Fonts \;
+      find . -name *.otf -exec cp {} ~/Library/Fonts \;
+      ;;
+    *)
+      echo "Unknow system"
+  esac
 }
 
 function update {
   pull
   init_subm
   rm_subm
-  build_command_t
-  install_fonts
 }
 
 function install_rc {
@@ -63,6 +70,8 @@ function install_rc {
 }
 
 function rerun {
+  build_command_t
+  install_fonts
   exit
 }
 
