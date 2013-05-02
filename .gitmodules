@@ -70,6 +70,8 @@
 	path = bundle/vim-numbertoggle
 	url = git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
   ignore = untracked
+  ignore = untracked
 [submodule "bundle/vim-unimpaired"]
 	path = bundle/vim-unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
+  ignore = untracked
