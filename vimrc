@@ -23,7 +23,7 @@ if has('gui_running')
   if has("gui_macvim")
     set guifont=Menlo:h16
   else
-    set guifont=Inconsolata\ for\ Powerline\ 14
+    set guifont=Menlo\ for\ Powerline\ 12
   endif
 else
   "Detect 256 color terminal
