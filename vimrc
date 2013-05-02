@@ -14,6 +14,8 @@ set visualbell
 if has('gui_running')
   "Turn on Powerline
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+  set laststatus=2
+  set noshowmode
 
   "Turn off toolbar
   set guioptions-=T
