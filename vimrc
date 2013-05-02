@@ -44,6 +44,8 @@ set cindent
 set shiftwidth=2
 set tabstop=2
 
+set cursorline
+
 set list listchars=tab:\ \ ,trail:·,extends:<,precedes:>
 
 set nowrap
