@@ -45,11 +45,17 @@ function build_command_t {
   cd $VIMDIR
 }
 
+function install_fonts {
+  #XXX only works on Linux for now
+  fc-cache -vf ~/.vim/fonts
+}
+
 function update {
   pull
   init_subm
   rm_subm
   build_command_t
+  install_fonts
 }
 
 function install_rc {

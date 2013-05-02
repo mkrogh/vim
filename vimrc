@@ -12,6 +12,9 @@ set hlsearch
 set visualbell
 
 if has('gui_running')
+  "Turn on Powerline
+  set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
   "Turn off toolbar
   set guioptions-=T
   "Turn off scrollbar
@@ -20,7 +23,7 @@ if has('gui_running')
   if has("gui_macvim")
     set guifont=Menlo:h16
   else
-    set guifont=Inconsolata\ 11
+    set guifont=Inconsolata\ for\ Powerline\ 14
   endif
 else
   "Detect 256 color terminal
