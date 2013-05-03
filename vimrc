@@ -16,6 +16,7 @@ if has('gui_running')
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
   set laststatus=2
   set noshowmode
+  let g:powerline_config_overrides={"ext": {"vim": {"colorscheme": "solarized"}}}
 
   "Turn off toolbar
   set guioptions-=T
