@@ -67,6 +67,7 @@ function update {
 
 function install_rc {
   build_command_t
+  install_fonts
 }
 
 function rerun {
