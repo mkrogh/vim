@@ -46,10 +46,6 @@
 	path = bundle/vim-git-log
 	url = https://github.com/vim-scripts/vim-git-log.git
   ignore = untracked
-[submodule "bundle/minibufexpl.vim"]
-	path = bundle/minibufexpl.vim
-	url = git://github.com/fholgado/minibufexpl.vim.git
-  ignore = untracked
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
