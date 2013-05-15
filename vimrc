@@ -72,5 +72,8 @@ autocmd FileType ruby let g:rubycomplete_classes_in_global = 1
 "Tagbar mapping
 nmap <F8> :TagbarToggle<CR>
 
+"Remap annoying numbertoggle, so it doesn't interfere with yankring
+let g:NumberToggleTrigger = "<F10>"
+
 " Autoload .vimrc from current directory (used for per directory wildignore)
 set exrc
