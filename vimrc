@@ -18,7 +18,7 @@ if has('gui_running')
   set noshowmode
   let g:powerline_config_overrides={"ext": {"vim": {"colorscheme": "solarized"}}}
 
-  "Turn off toolbar
+  "Turn off tool bar
   set guioptions-=T
   "Turn off scrollbar
   set guioptions-=r
@@ -75,5 +75,5 @@ nmap <F8> :TagbarToggle<CR>
 "Remap annoying numbertoggle, so it doesn't interfere with yankring
 let g:NumberToggleTrigger = "<F10>"
 
-" Autoload .vimrc from current directory (used for per directory wildignore)
+" Auto load .vimrc from current directory (used for per directory wildignore)
 set exrc
