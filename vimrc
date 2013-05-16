@@ -74,6 +74,8 @@ nmap <F8> :TagbarToggle<CR>
 
 "Remap annoying numbertoggle, so it doesn't interfere with yankring
 let g:NumberToggleTrigger = "<F10>"
+"Where the yankring history file is kept
+let g:yankring_history_dir = "~/.vim/tmp"
 
 " Auto load .vimrc from current directory (used for per directory wildignore)
 set exrc
