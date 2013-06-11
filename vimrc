@@ -77,5 +77,6 @@ let g:NumberToggleTrigger = "<F10>"
 "Where the yankring history file is kept
 let g:yankring_history_dir = "~/.vim/tmp"
 
-" Auto load .vimrc from current directory (used for per directory wildignore)
-set exrc
+"Where the local vimrc cache file is kept
+let g:local_vimrc = {'cache_file':$HOME.'/.vim/tmp/vim_local_rc_cache'}
+
