@@ -80,3 +80,8 @@ let g:yankring_history_dir = "~/.vim/tmp"
 "Where the local vimrc cache file is kept
 let g:local_vimrc = {'cache_file':$HOME.'/.vim/tmp/vim_local_rc_cache'}
 
+"Override IndexedSearch leader keys with commentary
+xmap \\  <Plug>Commentary
+nmap \\  <Plug>Commentary
+nmap \\\ <Plug>CommentaryLine
+nmap \\u <Plug>CommentaryUndo
