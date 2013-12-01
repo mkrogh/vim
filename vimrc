@@ -85,3 +85,13 @@ xmap \\  <Plug>Commentary
 nmap \\  <Plug>Commentary
 nmap \\\ <Plug>CommentaryLine
 nmap \\u <Plug>CommentaryUndo
+
+" Conque stuff
+let g:ConqueTerm_FastMode = 0
+let g:ConqueTerm_Color = 1
+let g:ConqueTerm_CWInsert = 1
+let g:ConqueTerm_TERM = 'vt220'
+let g:ConqueTerm_SendVisKey = '<Leader>e'
+
+
+
