@@ -93,5 +93,7 @@ let g:ConqueTerm_CWInsert = 1
 let g:ConqueTerm_TERM = 'vt220'
 let g:ConqueTerm_SendVisKey = '<Leader>e'
 
-
+" Map open buffers in Command-T to \bf
+" so it doesn't have to wait for \bd
+nnoremap <silent> <Leader>bf :CommandTBuffer<CR>
 
