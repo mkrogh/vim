@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 VIM_PATH=~/.vim
-REPO="git://github.com/jbro/vim.git"
+REPO="git://github.com/mkrogh/vim.git"
 
 while getopts dcp: flag; do
   case $flag in
     c)
-      REPO="git@github.com:jbro/vim.git"
+      REPO="git@github.com:mkrogh/vim.git"
       ;;
     p)
       VIM_PATH=$OPTARG
@@ -25,8 +25,8 @@ git clone --recursive $REPO $VIM_PATH
 cd $VIM_PATH
 ./update.sh -i
 
-git config user.name "Jesper B. Rosenkilde"
-git config user.email jbr@humppa.dk
+git config user.name "Markus Krogh"
+git config user.email markus@casadelkrogh.dk
 
 if [ ! $NO_SYMLINK ]; then
   ln -s $VIM_PATH/vimrc  ~/.vimrc
