@@ -10,7 +10,7 @@ Prerequisites
 
 Installation
 ------------
-    \curl -L https://raw.github.com/jbro/vim/master/install.sh | bash -s -- [-c] [-d] [-p INSTALL_PATH]
+    \curl -L https://raw.github.com/mkrogh/vim/master/install.sh | bash -s -- [-c] [-d] [-p INSTALL_PATH]
 
 Update
 ------
