@@ -1,5 +1,9 @@
 set nocompatible
 
+if $SHELL =~ 'fish'
+  set shell=/bin/sh
+endif
+
 execute pathogen#infect()
 call pathogen#helptags()
 
