@@ -77,8 +77,6 @@ let g:NumberToggleTrigger = "<F10>"
 "Where the yankring history file is kept
 let g:yankring_history_dir = "~/.vim/tmp"
 
-"Where the local vimrc cache file is kept
-let g:local_vimrc = {'cache_file':$HOME.'/.vim/tmp/vim_local_rc_cache'}
 
 "Override IndexedSearch leader keys with commentary
 xmap \\  <Plug>Commentary
@@ -96,4 +94,27 @@ let g:ConqueTerm_SendVisKey = '<Leader>e'
 " Map open buffers in Command-T to \bf
 " so it doesn't have to wait for \bd
 nnoremap <silent> <Leader>bl :CommandTBuffer<CR>
+
+let mapleader=','
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
+map <leader>h <Esc>:w\|!haml % %:r.html<CR>
+map <leader>c <Esc>:w\|!coffee -c %<CR>
+map <leader>r <Esc>:w\|!ruby %<CR>
+map <leader>s <Esc>:w\|!sass % %:r.css<CR>
+map <leader>t <Esc>:w\|!rspec <CR>
+map <leader>ex <Esc>:w\|!./% <CR>
+
+map <leader>rc <Esc>:tabe ~/.vimrc<CR>
+
+" Open files with <leader>f
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+" Open files, limited to the directory of the current file, with <leader>gf
+map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
+
+set splitright
 
