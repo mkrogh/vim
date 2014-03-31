@@ -99,5 +99,5 @@ let g:ConqueTerm_SendVisKey = '<Leader>e'
 
 " Map open buffers in Command-T to \bf
 " so it doesn't have to wait for \bd
-nnoremap <silent> <Leader>bl :CommandTBuffer<CR>
+nnoremap <silent> <Leader>bf :CommandTBuffer<CR>
 
