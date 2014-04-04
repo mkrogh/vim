@@ -16,6 +16,9 @@ set hlsearch
 set visualbell
 
 if has('gui_running')
+  colorscheme solarized
+  set background=dark
+
   "Turn on Powerline
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
   set laststatus=2
@@ -27,21 +30,17 @@ if has('gui_running')
   "Turn off scrollbar
   set guioptions-=r
 
+  set cursorline
+
   if has("gui_macvim")
     set guifont=Source\ Code\ Pro\ for\ Powerline:h16
   else
     set guifont=Source\ Code\ Pro\ for\ Powerline\ 12
   endif
 else
-  "Detect 256 color terminal
-  if $TERM == "xterm-256color" || $TERM == "gnome-256color"
-    "Assume no solarized theme
-    let g:solarized_termcolors=256
-  endif
+  colorscheme desert
+  set nocursorline
 endif
-
-colorscheme solarized
-set background=dark
 
 set backupdir^=~/.vim/backup
 set directory^=~/.vim/tmp
@@ -53,8 +52,6 @@ set expandtab
 set cindent
 set shiftwidth=2
 set tabstop=2
-
-set cursorline
 
 set list listchars=tab:➝\ ,trail:·,extends:<,precedes:>
 
