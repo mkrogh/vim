@@ -39,6 +39,9 @@ function build_command_t {
   fi
 
   ruby extconf.rb
+  if [ "$(uname)" = "Darwin" ]; then
+    sed -i -e 's/-multiply_definedsuppress//' Makefile
+  fi
   make
 
   # go back into repo root
