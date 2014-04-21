@@ -54,7 +54,7 @@ set cursorline
 
 set list listchars=tab:➝\ ,trail:·,extends:<,precedes:>
 
-set nowrap
+set wrap
 
 set foldmethod=syntax
 set nofoldenable
