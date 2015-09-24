@@ -54,12 +54,10 @@ set cursorline
 
 set list listchars=tab:➝\ ,trail:·,extends:<,precedes:>
 
-set nowrap
-
 set foldmethod=syntax
 set nofoldenable
 
-command! -bar -nargs=0 W :silent exe "write !sudo tee % >/dev/null"|silent edit!
+"command! -bar -nargs=0 W :silent exe "write !sudo tee % >/dev/null"|silent edit!
 
 set wildmode=longest,list,full
 
@@ -77,20 +75,6 @@ let g:NumberToggleTrigger = "<F10>"
 "Where the yankring history file is kept
 let g:yankring_history_dir = "~/.vim/tmp"
 
-
-"Override IndexedSearch leader keys with commentary
-xmap \\  <Plug>Commentary
-nmap \\  <Plug>Commentary
-nmap \\\ <Plug>CommentaryLine
-nmap \\u <Plug>CommentaryUndo
-
-" Conque stuff
-let g:ConqueTerm_FastMode = 0
-let g:ConqueTerm_Color = 1
-let g:ConqueTerm_CWInsert = 1
-let g:ConqueTerm_TERM = 'vt220'
-let g:ConqueTerm_SendVisKey = '<Leader>e'
-
 " Map open buffers in Command-T to \bf
 " so it doesn't have to wait for \bd
 nnoremap <silent> <Leader>bl :CommandTBuffer<CR>
@@ -101,6 +85,7 @@ map <leader>ew :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
+map <leader>d :e .<CR>
 
 map <leader>h <Esc>:w\|!haml % %:r.html<CR>
 map <leader>c <Esc>:w\|!coffee -c %<CR>
