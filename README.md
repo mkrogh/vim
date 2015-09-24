@@ -12,6 +12,11 @@ Installation
 ------------
     \curl -L https://raw.github.com/mkrogh/vim/master/install.sh | bash -s -- [-c] [-d] [-p INSTALL_PATH]
 
+Options: 
+
+    -c with commit checkout url
+    -p alternate install path
+
 Update
 ------
     ~/.vim/update.sh
