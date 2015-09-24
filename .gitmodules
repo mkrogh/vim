@@ -30,4 +30,4 @@
 	url = https://github.com/vim-scripts/IndexedSearch
 [submodule "bundle/Rename"]
 	path = bundle/Rename
-	url = git://github.com/vim-scripts/Rename.git
+	url = https://github.com/vim-scripts/Rename.git
