@@ -105,4 +105,6 @@ map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
 
 set splitright
+" Make backspace work for insert
+set backspace=indent,eol,start
 
