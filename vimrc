@@ -16,6 +16,7 @@ set smartcase
 set hlsearch
 
 set visualbell
+syntax on
 
 if has('gui_running')
   colorscheme solarized
