@@ -100,6 +100,9 @@ map <leader>ex <Esc>:w\|!./% <CR>
 
 map <leader>rc <Esc>:tabe ~/.vimrc<CR>
 
+" map _ to remove search highlight
+nnoremap <silent> _ :nohl<CR>
+
 " Open files with <leader>f
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 " Open files, limited to the directory of the current file, with <leader>gf
