@@ -56,6 +56,9 @@ set cindent
 set shiftwidth=2
 set tabstop=2
 
+"Python pep-008
+autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab
+
 set list listchars=tab:➝\ ,trail:·,extends:<,precedes:>
 
 set wrap
