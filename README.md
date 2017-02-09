@@ -5,8 +5,7 @@ My vimrc etc.
 Installation
 ------------
 
-    $ git clone https://github.com/jbro/vim.git ~/.vim
-    $ touch ~/.vim/enable_ycm # To enable YouCompleteMe
+    $ git clone https://github.com/mkrogh/vim.git ~/.vim
     $ vim
 
 Restart vim and you are good to go.
