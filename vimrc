@@ -109,6 +109,8 @@ let g:NumberToggleTrigger = "<F10>"
 "Where the yankring history file is kept
 let g:yankring_history_dir = "~/.vim/tmp"
 
+" Fix auto comment for new lines etc
+set formatoptions-=c formatoptions-=r formatoptions-=o
 
 let mapleader=','
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
