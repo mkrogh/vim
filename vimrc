@@ -2,13 +2,47 @@ scriptencoding utf-8
 set encoding=utf-8
 set nocompatible
 
-if $SHELL =~ 'fish'
-  set shell=/bin/sh
+"Set $VIMDIR to ~/.vim if unset
+if empty($VIMDIR)
+  let $VIMDIR = glob('~') . '/.vim'
+else
+  let g:vimdir = $VIMDIR
+end
+
+"Install vimplug, if not present
+if empty(glob($VIMDIR . '/autoload/plug.vim'))
+  silent !curl -fLo $VIMDIR/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  call mkdir($VIMDIR . '/spell', 'p')
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-execute pathogen#infect()
-call pathogen#helptags()
+call plug#begin($VIMDIR . '/plugged')
 
+"Well it's only sensible
+Plug 'tpope/vim-sensible'
+
+"Airline
+Plug 'bling/vim-airline'
+  Plug 'powerline/fonts', { 'dir': $VIMDIR . '/fonts/powerline', 'do': './install.sh' }
+  Plug 'vim-airline/vim-airline-themes'
+
+"Snipmate
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+
+"Automatic syntax checking
+Plug 'vim-syntastic/syntastic', { 'on': [] }
+"Delay syntatic load until we aren't doing anything
+augroup LazySyntatic
+  autocmd!
+  autocmd CursorHold * :call plug#load('syntastic')
+  autocmd CursorHold * :autocmd! LazySyntatic
+augroup END
+
+call plug#end()
+
+" Allow unsaved changes in buffers
 set hidden
 
 set ignorecase
@@ -21,12 +55,6 @@ syntax on
 if has('gui_running')
   colorscheme solarized
   set background=dark
-
-  "Turn on Powerline
-  set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-  set laststatus=2
-  set noshowmode
-  let g:powerline_config_overrides={"ext": {"vim": {"colorscheme": "solarized"}}}
 
   "Turn off tool bar
   set guioptions-=T
@@ -42,13 +70,14 @@ if has('gui_running')
   endif
 else
   colorscheme desert
+  let g:airline_theme = 'term'
   set nocursorline
 endif
 
-set backupdir^=~/.vim/backup
-set directory^=~/.vim/tmp
+set backupdir^=$VIMDIR/backup
+set directory^=$VIMDIR/tmp
 if version >= 703
-  set undodir^=~/.vim/undo
+  set undodir^=$VIMDIR/undo
 endif
 
 set expandtab
@@ -59,14 +88,14 @@ set tabstop=2
 "Python pep-008
 autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab
 
-set list listchars=tab:➝\ ,trail:·,extends:<,precedes:>
+set listchars=tab:→\ ,trail:·,extends:<,precedes:>,nbsp:␣
 
 set wrap
 
 set foldmethod=syntax
 set nofoldenable
 
-set wildmode=longest,list,full
+set wildmode=longest,full
 
 "Ruby stuff
 autocmd FileType ruby set omnifunc=rubycomplete#Complete
@@ -74,17 +103,12 @@ autocmd FileType ruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby let g:rubycomplete_rails = 1
 autocmd FileType ruby let g:rubycomplete_classes_in_global = 1
 
-"Tagbar mapping
-nmap <F8> :TagbarToggle<CR>
 
 "Remap annoying numbertoggle, so it doesn't interfere with yankring
 let g:NumberToggleTrigger = "<F10>"
 "Where the yankring history file is kept
 let g:yankring_history_dir = "~/.vim/tmp"
 
-" Map open buffers in Command-T to \bf
-" so it doesn't have to wait for \bd
-nnoremap <silent> <Leader>bf :CommandTBuffer<CR>
 
 let mapleader=','
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
@@ -101,17 +125,16 @@ map <leader>s <Esc>:w\|!sass % %:r.css<CR>
 map <leader>t <Esc>:w\|!rspec <CR>
 map <leader>ex <Esc>:w\|!./% <CR>
 
-map <leader>rc <Esc>:tabe ~/.vimrc<CR>
+map <leader>rc <Esc>:tabe $VIMDIR/.vimrc<CR>
 
 " map _ to remove search highlight
 nnoremap <silent> _ :nohl<CR>
-
-" Open files with <leader>f
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-" Open files, limited to the directory of the current file, with <leader>gf
-map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
 
 set splitright
 " Make backspace work for insert
 set backspace=indent,eol,start
 
+"Spelling defaults
+set spelllang=en_gb,da
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd FileType gitcommit setlocal spell

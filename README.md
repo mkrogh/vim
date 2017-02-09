@@ -2,21 +2,18 @@ Vim
 ===
 My vimrc etc.
 
-Prerequisites
--------------
-- Vim >= 7.3, with ruby support
-- Development files for the ruby version vim is build with
-- ctags
-
 Installation
 ------------
-    \curl -L https://raw.github.com/mkrogh/vim/master/install.sh | bash -s -- [-c] [-d] [-p INSTALL_PATH]
 
-Options: 
+    $ git clone https://github.com/jbro/vim.git ~/.vim
+    $ touch ~/.vim/enable_ycm # To enable YouCompleteMe
+    $ vim
 
-    -c with commit checkout url
-    -p alternate install path
+Restart vim and you are good to go.
 
 Update
 ------
-    ~/.vim/update.sh
+    $ cd ~/.vim
+    $ git pull master
+
+Then run vim and execute `:PlugUpdate`
