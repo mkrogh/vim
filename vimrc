@@ -97,6 +97,8 @@ set nofoldenable
 
 set wildmode=longest,full
 
+let g:is_posix = 1
+
 "Ruby stuff
 autocmd FileType ruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby let g:rubycomplete_buffer_loading = 1
