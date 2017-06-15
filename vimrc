@@ -30,6 +30,7 @@ Plug 'bling/vim-airline'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 
 "Automatic syntax checking
 Plug 'vim-syntastic/syntastic', { 'on': [] }
