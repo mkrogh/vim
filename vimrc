@@ -133,6 +133,9 @@ map <leader>ex <Esc>:w\|!./% <CR>
 
 map <leader>rc <Esc>:tabe $VIMDIR/.vimrc<CR>
 
+" Disable EX mode
+nnoremap Q <nop>
+
 " map _ to remove search highlight
 nnoremap <silent> _ :nohl<CR>
 
