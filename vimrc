@@ -147,3 +147,7 @@ set backspace=indent,eol,start
 set spelllang=en_gb,da
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd FileType gitcommit setlocal spell
+
+" Better highilight colors
+highlight SpellLocal ctermfg=255 ctermbg=2
+highlight SpellCap ctermfg=0
