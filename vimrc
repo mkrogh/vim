@@ -41,6 +41,10 @@ augroup LazySyntatic
   autocmd CursorHold * :autocmd! LazySyntatic
 augroup END
 
+"Puppet
+Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
+let g:puppet_align_hashes = 0
+
 call plug#end()
 
 " Allow unsaved changes in buffers
