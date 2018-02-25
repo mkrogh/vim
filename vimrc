@@ -45,6 +45,9 @@ augroup END
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 let g:puppet_align_hashes = 0
 
+"Go
+Plug 'fatih/vim-go'
+
 call plug#end()
 
 " Allow unsaved changes in buffers
