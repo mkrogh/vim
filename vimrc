@@ -33,13 +33,7 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
 "Automatic syntax checking
-Plug 'vim-syntastic/syntastic', { 'on': [] }
-"Delay syntatic load until we aren't doing anything
-augroup LazySyntatic
-  autocmd!
-  autocmd CursorHold * :call plug#load('syntastic')
-  autocmd CursorHold * :autocmd! LazySyntatic
-augroup END
+Plug 'w0rp/ale'
 
 "Puppet
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
