@@ -89,7 +89,10 @@ set tabstop=2
 
 "Python pep-008
 autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab
-let g:syntastic_python_flake8_args='--ignore=E501'
+let g:ale_python_flake8_options='--ignore=E501'
+
+"Puppetlint ignores
+let g:ale_puppet_puppetlint_options='--no-puppet_url_without_modules-check'
 
 set listchars=tab:→\ ,trail:·,extends:<,precedes:>,nbsp:␣
 
