@@ -92,7 +92,10 @@ autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab
 let g:ale_python_flake8_options='--ignore=E501'
 
 "Puppetlint ignores
-let g:ale_puppet_puppetlint_options='--no-puppet_url_without_modules-check'
+let g:ale_puppet_puppetlint_options='--no-puppet_url_without_modules-check --no-autoloader_layout-check'
+
+"Shellcheck disable realtive check
+let g:ale_shellcheck_options='-e SC1091'
 
 set listchars=tab:→\ ,trail:·,extends:<,precedes:>,nbsp:␣
 
@@ -153,5 +156,6 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd FileType gitcommit setlocal spell
 
 " Better highilight colors
-highlight SpellLocal ctermfg=255 ctermbg=2
+highlight SpellLocal ctermfg=253 ctermbg=2
 highlight SpellCap ctermfg=0
+highlight SpellBad ctermfg=249
