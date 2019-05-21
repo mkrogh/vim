@@ -167,3 +167,8 @@ autocmd FileType gitcommit setlocal spell
 highlight SpellLocal ctermfg=253 ctermbg=2
 highlight SpellCap ctermfg=0
 highlight SpellBad ctermfg=249
+
+" Use special colorscheme for diffs
+if &diff
+  colorscheme molokai
+endif
