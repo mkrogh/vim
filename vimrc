@@ -42,6 +42,12 @@ let g:puppet_align_hashes = 0
 "Go
 Plug 'fatih/vim-go'
 
+"Rainbow levels
+Plug 'thiagoalessio/rainbow_levels.vim'
+
+"Color schemes
+Plug 'tomasr/molokai'
+
 call plug#end()
 
 " Allow unsaved changes in buffers
@@ -132,6 +138,7 @@ map <leader>ev :vsp %%
 map <leader>et :tabe %%
 map <leader>d :e .<CR>
 
+map <leader>l <Esc>:RainbowLevelsToggle<cr>
 map <leader>h <Esc>:w\|!haml % %:r.html<CR>
 map <leader>c <Esc>:w\|!coffee -c %<CR>
 map <leader>r <Esc>:w\|!ruby %<CR>
