@@ -103,6 +103,9 @@ let g:ale_puppet_puppetlint_options='--no-puppet_url_without_modules-check --no-
 "Shellcheck disable realtive check
 let g:ale_shellcheck_options='-e SC1091'
 
+"Yamllint disables
+let g:ale_yaml_yamllint_options='disable-line'
+
 set listchars=tab:→\ ,trail:·,extends:<,precedes:>,nbsp:␣
 set list
 
