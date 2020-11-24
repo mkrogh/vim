@@ -124,6 +124,9 @@ autocmd FileType ruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby let g:rubycomplete_rails = 1
 autocmd FileType ruby let g:rubycomplete_classes_in_global = 1
 
+" Go stuff
+autocmd FileType go set nolist
+
 
 "Remap annoying numbertoggle, so it doesn't interfere with yankring
 let g:NumberToggleTrigger = "<F10>"
