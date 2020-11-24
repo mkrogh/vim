@@ -4,7 +4,11 @@ set nocompatible
 
 "Set $VIMDIR to ~/.vim if unset
 if empty($VIMDIR)
-  let $VIMDIR = glob('~') . '/.vim'
+  if has('nvim')
+    let $VIMDIR = glob('~/.config/nvim')
+  else
+    let $VIMDIR = glob('~/.vim')
+  end
 else
   let g:vimdir = $VIMDIR
 end
@@ -33,7 +37,7 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
 "Automatic syntax checking
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 
 "Puppet
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
@@ -60,27 +64,10 @@ set hlsearch
 set visualbell
 syntax on
 
-if has('gui_running')
-  colorscheme solarized
-  set background=dark
-
-  "Turn off tool bar
-  set guioptions-=T
-  "Turn off scrollbar
-  set guioptions-=r
-
-  set cursorline
-
-  if has("gui_macvim")
-    set guifont=Source\ Code\ Pro\ for\ Powerline:h16
-  else
-    set guifont=Source\ Code\ Pro\ for\ Powerline\ 12
-  endif
-else
+" if has("gui_running")... else
   colorscheme desert
   let g:airline_theme = 'term'
   set nocursorline
-endif
 
 set backupdir^=$VIMDIR/backup
 set directory^=$VIMDIR/tmp
@@ -127,11 +114,6 @@ autocmd FileType ruby let g:rubycomplete_classes_in_global = 1
 " Go stuff
 autocmd FileType go set nolist
 
-
-"Remap annoying numbertoggle, so it doesn't interfere with yankring
-let g:NumberToggleTrigger = "<F10>"
-"Where the yankring history file is kept
-let g:yankring_history_dir = "~/.vim/tmp"
 
 " Fix auto comment for new lines etc
 set formatoptions-=c formatoptions-=r formatoptions-=o
